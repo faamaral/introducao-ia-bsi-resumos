@@ -16,8 +16,22 @@ O termo percepção é usado para se referir aos estimulos sensoriais que captam
 ### Atuação
 refere-se aos estimulos do agente que alteram o estado do meio exterior.
 
-## Mapeaamento de percepções em ações
+## Mapeamento de percepções em ações
 
 ### Sequencia de percepções
 Trata-se da sequencia completa de tudo que o agente percebeu.
+
+### Função do agente
+Matematicamente falando, o compotamento do agente é dado pela função do agente, que mapeia sequencia de percepções dada para uma ação.
+
+$ [f: P* -> A]$
+
+onde P* é a sequencia de percepções e A é uma ação.
+
+### Programa do agente
+É uma implementação concreta que é executado em algum sistema (arquitetura) fisico(a) para produzir a função do agente.
+- Agente = Arquitetura + Programa.
+
+## Agente racional
+Um agente racional é aquele que faz tudo certo - conceitualmente falando, toda entrada na tabela da função do agente é preenchida corretamente.
 
