@@ -35,3 +35,26 @@ onde P* é a sequencia de percepções e A é uma ação.
 ## Agente racional
 Um agente racional é aquele que faz tudo certo - conceitualmente falando, toda entrada na tabela da função do agente é preenchida corretamente.
 
+De maneira um pouco mais simplista, um agente racional pode ser qualquer coisa que tome decisões, seja uma pessoa, uma empresa, um robo ou um software.
+
+A pergunta que fica com essas definições é, como saber se o agente realmente tomou a decisão correta?
+
+Bem como sabemos, quando o agente é colocado em um ambiente, ele realiza uma sequencia de ações de acordo as suas percepções do ambiente. Esta sequecia de ações faz com que o ambiente passe por uma sequencia de estados.
+Ex: Local sujo ateriormente, mas no momento atual ele esta limpo.
+se a sequencia de estados é a esperada, então o agente tem boa performance.
+Essa noção de resultado esperado é tomado como medida de desempenho,ela avalia qualquer sequencia de estados dados ao ambiente.
+Se a medida de desempenho coincidir com o objetivo do agente, então, a ação do agente é retornada como "Correta".
+
+Note que para cada sequecia de percepções possiveis, o agente deve selecionar uma ação que venha a maximizar sua medida de desempenho.
+
+### Onisciencia, aprendizado e autonomia
+
+É preciso saber destinguir entre racionalidade e onisciência. Um agente onisciente conhece o resultado real das suas açôes, e pode agir de acordo a elas.
+A racionalidade não é o mesmo que perfeição. A racionalidade maximiza o desempenho esperado, enquanto que a perfeição maximiza o desempenho real.
+Portanto, afirma-se que a racionalidade não exige onisciência porque a escolha racional só depende da sequencia de percepções até o momento.
+O gente deve realizar ações em pról de modicar futuras percepções, tambem conhecido como **coleta de informações**.
+Um tipo importante de coleta de informação é a **exploração** de um ambiente desconhecido. É requerido que um agente não apenas colete informações, mas também seja capaz de aprender o maximo possivel a partir do que ele percebe. Isso significa que a medida em que o agente for amadurecendo ele poderá modificar o seu comportamento com base em sua experiencia, caracterizando o que chamamos de um **Agente Autonomo**.
+Um agente que aprende tende a ter sucesso em uma ampla gama de ambientes.
+
+## A natureza dos ambientes
+
