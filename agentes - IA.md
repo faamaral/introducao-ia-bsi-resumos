@@ -50,11 +50,15 @@ Note que para cada sequecia de percepções possiveis, o agente deve selecionar 
 ### Onisciencia, aprendizado e autonomia
 
 É preciso saber destinguir entre racionalidade e onisciência. Um agente onisciente conhece o resultado real das suas açôes, e pode agir de acordo a elas.
+
 A racionalidade não é o mesmo que perfeição. A racionalidade maximiza o desempenho esperado, enquanto que a perfeição maximiza o desempenho real.
+
 Portanto, afirma-se que a racionalidade não exige onisciência porque a escolha racional só depende da sequencia de percepções até o momento.
+
 O gente deve realizar ações em pról de modicar futuras percepções, tambem conhecido como **coleta de informações**.
+
 Um tipo importante de coleta de informação é a **exploração** de um ambiente desconhecido. É requerido que um agente não apenas colete informações, mas também seja capaz de aprender o maximo possivel a partir do que ele percebe. Isso significa que a medida em que o agente for amadurecendo ele poderá modificar o seu comportamento com base em sua experiencia, caracterizando o que chamamos de um **Agente Autonomo**.
+
 Um agente que aprende tende a ter sucesso em uma ampla gama de ambientes.
 
 ## A natureza dos ambientes
-
