@@ -57,8 +57,17 @@ Portanto, afirma-se que a racionalidade não exige onisciência porque a escolha
 
 O gente deve realizar ações em pról de modicar futuras percepções, tambem conhecido como **coleta de informações**.
 
-Um tipo importante de coleta de informação é a **exploração** de um ambiente desconhecido. É requerido que um agente não apenas colete informações, mas também seja capaz de aprender o maximo possivel a partir do que ele percebe. Isso significa que a medida em que o agente for amadurecendo ele poderá modificar o seu comportamento com base em sua experiencia, caracterizando o que chamamos de um **Agente Autonomo**.
+Um tipo importante de coleta de informação é a **exploração** de um ambiente desconhecido. É requerido que um agente não apenas colete informações, mas também seja capaz de aprender o maximo possivel a partir do que ele percebe. Isso significa que a medida em que o agente for amadurecendo ele poderá
+modificar o seu comportamento com base em sua experiencia, caracterizando o que chamamos de um **Agente Autonomo**.
 
 Um agente que aprende tende a ter sucesso em uma ampla gama de ambientes.
 
 ## A natureza dos ambientes
+
+### Especificando o ambiente de tarefa
+
+Ao projetar um agente, o primeiro passo a sempre ser feito é especificar um ambiente de tarefa o tanto completo quanto possivel.
+
+Um ambiente de taferas é um agrupamento dos termos: medida de desempenho, o ambiente e as sensores e atuadores do agente. Esse agrupamento é encontrado com mais frequencia em bibliografias com o acrônimo vindo do inglês **PEAS** (performance, Enviroinment, Actuators, Sensors).
+
+### Propriedades do ambiente de tarefa
