@@ -71,3 +71,12 @@ Ao projetar um agente, o primeiro passo a sempre ser feito é especificar um amb
 Um ambiente de taferas é um agrupamento dos termos: medida de desempenho, o ambiente e as sensores e atuadores do agente. Esse agrupamento é encontrado com mais frequencia em bibliografias com o acrônimo vindo do inglês **PEAS** (performance, Enviroinment, Actuators, Sensors).
 
 ### Propriedades do ambiente de tarefa
+
+Há uma enorme gama de ambientes de tarefa que podem surgir na **inteligencia Artificial**, porem , podemos indentificar apenas um pequeno numero de ambientes de tarefa a serem divididos em categorias. Essas dimensões são importantes por que determinam o projeto apropriado do agente e a aplicabilidade de varias tecnicas de implementação de agentes.
+
+A seguir analisaremos as Propriedades de varios ambientes de tarefa
+
+#### Completamente Observavel vs Parcialmente Observavel
+
+Se os sensores do agente dão a ele acesso completo ao estado do ambiente a cada instante, então nós dizemos que esse ambiente de tarefa é completamente observavel.
+Um ambiente de terafas é efetivamente observavel se os sensores detectam todos os aspectos relevantes para a escolha da ação.por sua vez, a relevancia depende da medida de desempenho.
