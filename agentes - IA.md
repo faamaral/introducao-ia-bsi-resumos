@@ -24,13 +24,13 @@ Trata-se da sequencia completa de tudo que o agente percebeu.
 ### Função do agente
 Matematicamente falando, o compotamento do agente é dado pela função do agente, que mapeia sequencia de percepções dada para uma ação.
 
-$ [f: P* -> A]$
+' [f: P* -> A] '
 
 onde P* é a sequencia de percepções e A é uma ação.
 
 ### Programa do agente
 É uma implementação concreta que é executado em algum sistema (arquitetura) fisico(a) para produzir a função do agente.
-- Agente = Arquitetura + Programa.
+' Agente = Arquitetura + Programa. '
 
 ## Agente racional
 Um agente racional é aquele que faz tudo certo - conceitualmente falando, toda entrada na tabela da função do agente é preenchida corretamente.
@@ -138,9 +138,31 @@ O programa do agente dirigido por tabela acompanha a squencia de percepções e 
 alem disso,o tempo para construir a tabela é muito longo e nenhum agente poderia aprender todas as entradas de tabela corretas de acordo a sua experiencia.
 O tempo para aprender a tabela caso seja possivel tambem saria bastante longo.
 
+### Tipos de agentes 
 
+Agora falaremos sobre quatro tipos basicos de programas de agentes que incorporam os principios subjacentes a quase todos os sistemas inteligentes.
 
-        
+#### Agente reativo simples
+
+O **agente reativo simples** é o tipo mais simples de agente,eles selecionam as ações de acordo a percepção atual, ignorando o restante do historico de ações.
+
+A conexão entre a percepção e a ação é feita por regra condicionais (Regra condição-ação).
+
+' se CARRO-DA-FRENTE-ESTÁ-FREANDO então COMEÇAR-A-FREAR '
+
+Os agentes reativos simples tem a admiravel propriedade de serem simples, mas se caracterizam por powwuir inteligencia limitada.
+Isso significa que O agente só funcionará corretamente caso a decisão correta seja tomada com base apenas na percpção atual, ou seja, somente se o ambiente for completamente observavel.
+
+- Algoritmo de um Agente reativo simples
+
+'''
+**função** AGENTE-REATIVO-SIMPLES(percepção) **retorna** uma ação
+    **variaveis estaticas:** regras, um conjunto de regras condição-ação
+    estado <- INTERPRETAR-ENTRADA(percepção)
+    regra <- REGRA-CORRESPONDENTE(estado, regras)
+    ação <- AÇÃO-DA-REGRA[regra]
+    **retornar** ação
+'''
 
 
 
