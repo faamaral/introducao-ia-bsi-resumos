@@ -113,3 +113,37 @@ Se o ambiente não muda com a passagem do tempo, mas a medida de desempenho do a
 
 A distinção entre discreto e continuo aplica-se ao estado do ambiente ao modo como o tempo é tratado e ainda as persepções e ações do agente.
 Um agente discreto possui um conjunto finito de estados, alem de um numero limitado de percepções e ações.
+
+## A estrutura de Agentes ( Tipos de Agentes)
+
+Agora veremos um pouco de como é o funcionamento interno dos agentes. O trabalho de IA é projetar o **programa do agente** que implementa a função do agente (Que mapeia as percepções em ações). Este programa é execultado em em dispositivo fisico equipado com sensores e atuadores podendo ser um computador de mesa, um carro robotico, etc. Esse conjunto é chamado de arquitetura. Como foi dito lá atrás, um Agente é formado pela arquitetura mais o programa do agente.
+
+    Agente = Arquitetura + Programa
+    
+### Agentes dirigidos por tabela
+
+O programa do agente dirigido por tabela acompanha a squencia de percepções e depois a utiliza para realizar a indexação em uma tabela de ações, a fim de decidir qual a melhor ação a ser feita.
+
+É necessario construir uma tabela que contenha a ação necessaria pata cada sequencia de percepções possiveis.
+
+    função AGENTE-DIRIGIDO-POR-TABELA(percepção) retorna UMA AÇÂO
+        variaveis estaticas: percepções, uma sequencia, tabela inicialmente vazia
+                             uma tabela de ações, indexada por sequências de percepções, 
+                             inicialmente completamente especificada
+        anexar percepção ao fim das percepções
+        ação <- ACESSAR(percepções, tabela)
+        retornar AÇÂO
+
+É importante ressaltar que a abordagem de agentes dirigitos por tabela está sujeita ao fracasso, pois dependendo do problema essa abordagem poderá gerar tabelas enormes ao ponto de não existir dispositivo fisico que consiga armazena-las.
+alem disso,o tempo para construir a tabela é muito longo e nenhum agente poderia aprender todas as entradas de tabela corretas de acordo a sua experiencia.
+O tempo para aprender a tabela caso seja possivel tambem saria bastante longo.
+
+
+
+        
+
+
+
+
+
+
