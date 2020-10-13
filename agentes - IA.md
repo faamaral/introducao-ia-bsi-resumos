@@ -76,7 +76,7 @@ Há uma enorme gama de ambientes de tarefa que podem surgir na **Inteligência A
 
 A seguir analisaremos as propriedades de varios ambientes de tarefa
 
-#### Completamente observavel vs Parcialmente observavel
+#### Completamente observavel vs. Parcialmente observavel
 
 Se os sensores do agente dão a ele acesso completo ao estado do ambiente a cada instante, então nós dizemos que esse ambiente de tarefa é completamente observavel.
 Um ambiente de tarefas é efetivamente observavel se os sensores detectam todos os aspectos relevantes para a escolha da ação.por sua vez, a relevancia depende da medida de desempenho.
@@ -84,4 +84,32 @@ Um ambiente de tarefas é efetivamente observavel se os sensores detectam todos 
 Um agente pode ser parcialmente observavel devido a ruidos e a sensores imprecisos ou por que partes do estado estão simplesmente faltando nos dados do sensor.
 Quando o agente não possiu sensores, o ambiente é então tratado como inobservavel.
 
-####  Agentes unicos vs Multiagentes
+####  Agentes unicos vs. Multiagentes
+
+De maneira simplista, um agente unico é o unico agente que está operando sozinho no ambiente.
+Quando o ambiente está sendo operado por mais de um agente, então temos um ambiente de multiagentes
+Os multiagentes podem ser **Competitivos** (Quando a maximização da medida de desempenho de um agente miniza a medida de desempenho de outro agente) e **Cooperativos** (Quando a ação de um agente maximiza a medida de desempenho de todos os agentes).
+
+#### Deterministico vs. Estocastico
+
+Se o proximo estado do ambiente é completamente determinado pelo estado atual e pela ação executada pelo agente, então dizemos que o ambiente é deterministico. caso contrario dizemos que ele é estocastico.
+
+#### Episodico vs. Sequencial
+
+Em um ambiente de tarefa episodico a experiencia do agente é dividida em episodios atomicos, em que cada episodio o agente recebe uma percepção e então executa uma ação.
+
+A escolha da ação em cada episodio só depende do proprio episodio, portanto, é crucial que o episodio seguinte não dependa das ações executadas em episodios anteriores.
+
+Em contra partida, em ambientes sequenciais, a decisão atual pode afetar todas as decisões futuras.
+
+#### Estatico vs. Dinamico
+
+Se o ambiente puder se alterar enquanto um agente está deliberando, dizemos que o ambiente é dinamico para esse agente.
+
+O ambiente é estatico se ele não muda enquanto o agente pensa.
+Se o ambiente não muda com a passagem do tempo, mas a medida de desempenho do agente se altera, dizemos que esse ambiente é semidinamico.
+
+#### Discreto vs. Continuo
+
+A distinção entre discreto e continuo aplica-se ao estado do ambiente ao modo como o tempo é tratado e ainda as persepções e ações do agente.
+Um agente discreto possui um conjunto finito de estados, alem de um numero limitado de percepções e ações.
