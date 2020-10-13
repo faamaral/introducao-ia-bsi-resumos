@@ -24,7 +24,7 @@ Trata-se da sequencia completa de tudo que o agente percebeu.
 ### Função do agente
 Matematicamente falando, o compotamento do agente é dado pela função do agente, que mapeia sequencia de percepções dada para uma ação.
 
-' [f: P* -> A] '
+"[f: P* -> A]"
 
 onde P* é a sequencia de percepções e A é uma ação.
 
@@ -148,21 +148,22 @@ O **agente reativo simples** é o tipo mais simples de agente,eles selecionam as
 
 A conexão entre a percepção e a ação é feita por regra condicionais (Regra condição-ação).
 
-' se CARRO-DA-FRENTE-ESTÁ-FREANDO então COMEÇAR-A-FREAR '
+` se CARRO-DA-FRENTE-ESTÁ-FREANDO então COMEÇAR-A-FREAR `
 
 Os agentes reativos simples tem a admiravel propriedade de serem simples, mas se caracterizam por powwuir inteligencia limitada.
 Isso significa que O agente só funcionará corretamente caso a decisão correta seja tomada com base apenas na percpção atual, ou seja, somente se o ambiente for completamente observavel.
 
 - Algoritmo de um Agente reativo simples
 
-'''
+```
+
 **função** AGENTE-REATIVO-SIMPLES(percepção) **retorna** uma ação
     **variaveis estaticas:** regras, um conjunto de regras condição-ação
     estado <- INTERPRETAR-ENTRADA(percepção)
     regra <- REGRA-CORRESPONDENTE(estado, regras)
     ação <- AÇÃO-DA-REGRA[regra]
     **retornar** ação
-'''
+```
 
 
 
