@@ -24,13 +24,14 @@ Trata-se da sequencia completa de tudo que o agente percebeu.
 ### Função do agente
 Matematicamente falando, o compotamento do agente é dado pela função do agente, que mapeia sequencia de percepções dada para uma ação.
 
-"[f: P* -> A]"
+`[f: P* -> A]`
 
 onde P* é a sequencia de percepções e A é uma ação.
 
 ### Programa do agente
 É uma implementação concreta que é executado em algum sistema (arquitetura) fisico(a) para produzir a função do agente.
-' Agente = Arquitetura + Programa. '
+
+` Agente = Arquitetura + Programa. `
 
 ## Agente racional
 Um agente racional é aquele que faz tudo certo - conceitualmente falando, toda entrada na tabela da função do agente é preenchida corretamente.
@@ -119,7 +120,7 @@ Um agente discreto possui um conjunto finito de estados, alem de um numero limit
 Agora veremos um pouco de como é o funcionamento interno dos agentes. O trabalho de IA é projetar o **programa do agente** que implementa a função do agente (Que mapeia as percepções em ações). Este programa é execultado em em dispositivo fisico equipado com sensores e atuadores podendo ser um computador de mesa, um carro robotico, etc. Esse conjunto é chamado de arquitetura. Como foi dito lá atrás, um Agente é formado pela arquitetura mais o programa do agente.
 
     Agente = Arquitetura + Programa
-    
+
 ### Agentes dirigidos por tabela
 
 O programa do agente dirigido por tabela acompanha a squencia de percepções e depois a utiliza para realizar a indexação em uma tabela de ações, a fim de decidir qual a melhor ação a ser feita.
@@ -128,7 +129,7 @@ O programa do agente dirigido por tabela acompanha a squencia de percepções e 
 
     função AGENTE-DIRIGIDO-POR-TABELA(percepção) retorna UMA AÇÂO
         variaveis estaticas: percepções, uma sequencia, tabela inicialmente vazia
-                             uma tabela de ações, indexada por sequências de percepções, 
+                             uma tabela de ações, indexada por sequências de percepções,
                              inicialmente completamente especificada
         anexar percepção ao fim das percepções
         ação <- ACESSAR(percepções, tabela)
@@ -138,7 +139,7 @@ O programa do agente dirigido por tabela acompanha a squencia de percepções e 
 alem disso,o tempo para construir a tabela é muito longo e nenhum agente poderia aprender todas as entradas de tabela corretas de acordo a sua experiencia.
 O tempo para aprender a tabela caso seja possivel tambem saria bastante longo.
 
-### Tipos de agentes 
+### Tipos de agentes
 
 Agora falaremos sobre quatro tipos basicos de programas de agentes que incorporam os principios subjacentes a quase todos os sistemas inteligentes.
 
@@ -157,16 +158,25 @@ Isso significa que O agente só funcionará corretamente caso a decisão correta
 
 ```
 
-**função** AGENTE-REATIVO-SIMPLES(percepção) **retorna** uma ação
-    **variaveis estaticas:** regras, um conjunto de regras condição-ação
+função AGENTE-REATIVO-SIMPLES(percepção) retorna UMA AÇÂO
+    variaveis estaticas: regras, um conjunto de regras condição-ação
     estado <- INTERPRETAR-ENTRADA(percepção)
     regra <- REGRA-CORRESPONDENTE(estado, regras)
     ação <- AÇÃO-DA-REGRA[regra]
-    **retornar** ação
+    retornar AÇÂO
 ```
 
+- Exemplo de agente reativo simples usando o mundo do aspirador de pó com sintaxe em python
 
+~~~python
 
+def agente_aspirador_de_po_reativo(percepcao):
+	local, estado = percepcao
+	if estado == 'sujo':
+		return 'aspirar'
+	elif local == 'local A':
+		return 'direita'
+	elif local == 'local B':
+		return 'esquerda'
 
-
-
+~~~
