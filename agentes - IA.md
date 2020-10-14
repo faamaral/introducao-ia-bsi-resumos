@@ -180,3 +180,38 @@ def agente_aspirador_de_po_reativo(percepcao):
 		return 'esquerda'
 
 ~~~
+
+#### Agente reativo baseado em modelo
+
+  O modo mais efetivo de lidar com a possibilidade de observação parcial do ambiente é o _Agente monitorar a parte do mundo que ele não pode ver agora_, ou seja, o agente deve manter algum tipo de __estado interno__ que dependa do historico de percepções para que possa refletir pelomenos alguns dos aspectos não observados do estado atual.
+
+  Para que as informações do estado interno possam ser atualizadas a medida em que o tempo passa é nececessario que dois tipos de conhecimentos sejam codificados no programa do agente.
+  A primeira são as informações necessarias sobre o modo como o mundo evolui independentemente do agente.
+  a segunda são as informações de como as ações do proprio agente afetam o mundo.
+
+  O conhecimento de "Como o mundo funciona", seja ele implementado em circuitos boleanos simples ou em teorias cientificas completas é chamado de __modelo__ do mundo. Então os agentes que usam esse modelo são chamados de **Agentes reativos baseados em modelo**.
+
+  - Algoritmo do programa do agente reativo baseado em modelo
+
+  ~~~
+
+  função AGENTE-REATIVO-BASEADO-EM-MODELOS (percepção) retorna uma ação
+  persistente: estado, a concepção do agente do estado atual do mundo
+  modelo, uma descrição de como o próximo estado depende do estado atual e da
+  ação
+  regras, um conjunto de regras condição-ação
+  ação, a ação mais recente, inicialmente nenhuma
+  estado ← ATUALIZAR-ESTADO (estado, ação, percepção, modelo)
+  regra ← REGRA-CORRESPONDENTE (estado, regras)
+
+  ~~~
+
+  - Algoritmo do programa do agente reativo baseado em modelo com implementação em python
+
+  ~~~python
+  def agente_reativo_baseado_em_modelo(regra, atualiza_estado, modelo):
+        return 'Farei alguma coisa aqui'
+
+  ~~~
+
+  
