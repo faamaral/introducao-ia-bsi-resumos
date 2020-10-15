@@ -193,18 +193,18 @@ def agente_aspirador_de_po_reativo(percepcao):
 
   - Algoritmo do programa do agente reativo baseado em modelo
 
-  ~~~
+~~~
+Função AGENTE-REATIVO-COM-ESTADOS(percepção) retorna uma ação
+    Variáveis estáticas:
+      estado, uma descrição do estado atual do mundo regras, um conjunto de regras condição-ação
+      ação, a ação mais recente, incialmente nenhuma
 
-  função AGENTE-REATIVO-BASEADO-EM-MODELOS (percepção) retorna uma ação
-  persistente: estado, a concepção do agente do estado atual do mundo
-  modelo, uma descrição de como o próximo estado depende do estado atual e da
-  ação
-  regras, um conjunto de regras condição-ação
-  ação, a ação mais recente, inicialmente nenhuma
-  estado ← ATUALIZAR-ESTADO (estado, ação, percepção, modelo)
-  regra ← REGRA-CORRESPONDENTE (estado, regras)
+      estado ← ATUALIZA-ESTADO(estado, ação, percepção)
+      regra ← REGRA-CORRESPONDENTE(estado, regras)
+      ação ← AÇÃO-DA-REGRA[regra]
 
-  ~~~
+    retornar ação
+~~~
 
   - Algoritmo do programa do agente reativo baseado em modelo com implementação em python
 
@@ -213,5 +213,13 @@ def agente_aspirador_de_po_reativo(percepcao):
         return 'Farei alguma coisa aqui'
 
   ~~~
+#### Agente baseado em objetivos
 
-  
+As vezes conhecer sobre o estado atual do ambiente nem sempre é o suficiente para tomar uma decisão sobre o que fazer.
+
+É possivel ocorrer situações onde a decisão correta a ser tomada pelo agente dependerá do objetivo a que ele quer alcançar. Isso significa que da mesma forma que o agente precisa do estado atual, ele tambem precisa de algum tipo de informação sobre __objetivos__ que descrevam situações desejáveis.
+O programa do agente pode combinar isso com o modelo, afim de escolher ações que alcancem o objetivo.
+
+Um Agente com essas caracteristicas é conhecido como __Agente baseado em modelo e orientado a __objetivos__
+
+#### Agentes baseados na utilidade
