@@ -220,6 +220,29 @@ As vezes conhecer sobre o estado atual do ambiente nem sempre é o suficiente pa
 É possivel ocorrer situações onde a decisão correta a ser tomada pelo agente dependerá do objetivo a que ele quer alcançar. Isso significa que da mesma forma que o agente precisa do estado atual, ele tambem precisa de algum tipo de informação sobre __objetivos__ que descrevam situações desejáveis.
 O programa do agente pode combinar isso com o modelo, afim de escolher ações que alcancem o objetivo.
 
-Um Agente com essas caracteristicas é conhecido como __Agente baseado em modelo e orientado a __objetivos__
+Um Agente com essas caracteristicas é conhecido como __Agente baseado em modelo e orientado a objetivos__.
 
 #### Agentes baseados na utilidade
+
+Objetivos por si só não são suficientes para gerar um comportamento de alta qualidade na maioria dos ambientes.
+Os objetivos simplesmente fornecem uma distinção binaria entre "estados felizes" e "infelizes", enquanto uma medida de desempenho mais geral deve permitir uma comparação entre difirentes estados do mundo de acordo ao grau exato de felicidade que proporcioariam ao agente.
+
+Esses estados "felizes" e "infelizes" são nomeados sobre o termo __utilidade__.
+
+A função de utilidade do agente é essencialmente uma internalização da medida de desempenho. Se a função utilidade interna e a medida de desempenho externa estiverem de acordo, um agente que escolhe ações que maximizam sua utilidade será racional de acordo a medida de desempenho externa.
+
+#### Agente de aprendizagem
+
+Um __agente de aprendizagem__ é um tipo de agente que pode aprender com suas experiencias anteriores ou que possui capacidade de aprendizagem.
+O seu conhecimento inicial é basico, e com o decorrer das suas percepções e ações, ele vai aprendendo com elas e se modificando e melhorando cada vez mais o seu desempenho.
+
+Um agente de aprendizagem pode ser dividido em quatro componentes conceituais.
+
+1. __Elemento de aprendizado:__
+Responsavel pela execução de aperfeiçoamentos baseado no que vem aprendendo
+
+2. **Elemento de desempenho:** Responsavel pela seleção de ações externas
+
+3. **Critico:** O elemento de aprendizado recebe feedback do critico, que descreve como o agente está se saindo em relação a um padrão de desempenho fixo.
+
+4. **Gerador de problemas:** Ele é Responsavel por sugerir ações que levaram a experiencias novas e informativas.
